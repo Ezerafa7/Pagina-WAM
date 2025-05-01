@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutoriales paso a paso para usar el sistema WAM con WhatsApp. Aprende a realizar reclamos, informar pagos y reservar amenidades fácilmente.">
+  <title>Tutoriales WAM</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f8ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #e8efff;
+    }
+
+    h2 {
+      color: #19006c;
+      font-size: 2.5rem;
+    }
+
+    p.description {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .tutorials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card header {
+      background-color: #0066cc;
+      color: white;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card video {
+      width: 100%;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .card .content {
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .card .content p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .card .steps-toggle {
+      background-color: #eef4ff;
+      border-top: 1px solid #ccc;
+      padding: 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-align: left;
+      color: #0b2b50;
+    }
+
+    .card .steps {
+      display: none;
+      padding: 1rem;
+      background-color: #f9fbff;
+      border-top: 1px solid #ddd;
+    }
+
+    .card.open .steps {
+      display: block;
+    }
+
+    .card.open .steps-toggle::after {
+      content: "▲ Ocultar pasos";
+      float: right;
+    }
+
+    .steps-toggle::after {
+      content: "▼ Ver pasos";
+      float: right;
+    }
+
+    .steps ol {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    .steps li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #7dc4ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #004c99;
+    }
+  </style>
+  <script>
+
+    function toggleSteps(card) {
+      card.classList.toggle('open');
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h2>📚 Tutoriales</h2>
+    <p class="description">Accede a los tutoriales paso a paso del sistema WAM y su integración con WhatsApp.</p>
+  
+</header>
+
+  <section class="tutorials">
+
+    <div class="card">
+
+      <header>📨 Realizar Reclamos</header>
+      
+      <video src="videos/reclamos.mp4" controls poster="thumbnails/reclamos.jpg"></video>
+
+      <div class="content">
+        <p>Aprende cómo enviar un reclamo desde WhatsApp.</p>
+      </div>
+
+      <div class="steps-toggle" onclick="toggleSteps(this.parentElement)"> </div>
+
+      <div class="steps">
+        <ol>
+            <li>Paso 1.</li>
+            <li>Paso 2.</li>
+            <li>Paso 3.</li>
+            <li>Paso 4.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card">
+      <header>💳 Informar Pago de Expensas</header>
+      <video src="videos/pago-expensas.mp4" controls poster="thumbnails/pago-expensas.jpg"></video>
+      <div class="content">
+        <p>Tutorial para informar pagos de forma fácil y rápida.</p>
+      </div>
+      <div class="steps-toggle" onclick="toggleSteps(this.parentElement)"> </div>
+      <div class="steps">
+        <ol>
+            <li>Paso 1.</li>
+            <li>Paso 2.</li>
+            <li>Paso 3.</li>
+            <li>Paso 4.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card">
+      <header>📅 Hacer reserva de amenidades</header>
+      <video src="videos/reserva-amenidades.mp4" controls poster="thumbnails/reserva-amenidades.jpg"></video>
+      <div class="content">
+        <p>Descubre cómo reservar espacios comunes desde tu celular.</p>
+      </div>
+      <div class="steps-toggle" onclick="toggleSteps(this.parentElement)"> </div>
+      <div class="steps">
+        <ol>
+            <li>Paso 1.</li>
+            <li>Paso 2.</li>
+            <li>Paso 3.</li>
+            <li>Paso 4.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="Pagina WAM2.html" class="btn">Pagina 2</a>
+    <a href="Pagina WAM.html" class="btn">Pagina 1</a>
+  </footer>
+</body>
+</html>
